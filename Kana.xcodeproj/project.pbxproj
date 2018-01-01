@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A3EBD12A1FFAB9A400D2ABE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EBD1291FFAB9A400D2ABE2 /* AppDelegate.swift */; };
-		A3EBD12C1FFAB9A400D2ABE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EBD12B1FFAB9A400D2ABE2 /* ViewController.swift */; };
+		A3EBD12C1FFAB9A400D2ABE2 /* KanaRomanizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EBD12B1FFAB9A400D2ABE2 /* KanaRomanizationController.swift */; };
 		A3EBD12F1FFAB9A400D2ABE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3EBD12D1FFAB9A400D2ABE2 /* Main.storyboard */; };
 		A3EBD1321FFAB9A400D2ABE2 /* Kana.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3EBD1301FFAB9A400D2ABE2 /* Kana.xcdatamodeld */; };
 		A3EBD1341FFAB9A400D2ABE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3EBD1331FFAB9A400D2ABE2 /* Assets.xcassets */; };
@@ -18,7 +18,7 @@
 /* Begin PBXFileReference section */
 		A3EBD1261FFAB9A400D2ABE2 /* Kana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3EBD1291FFAB9A400D2ABE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A3EBD12B1FFAB9A400D2ABE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A3EBD12B1FFAB9A400D2ABE2 /* KanaRomanizationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaRomanizationController.swift; sourceTree = "<group>"; };
 		A3EBD12E1FFAB9A400D2ABE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A3EBD1311FFAB9A400D2ABE2 /* Kana.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Kana.xcdatamodel; sourceTree = "<group>"; };
 		A3EBD1331FFAB9A400D2ABE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				A3EBD1291FFAB9A400D2ABE2 /* AppDelegate.swift */,
-				A3EBD12B1FFAB9A400D2ABE2 /* ViewController.swift */,
+				A3EBD12B1FFAB9A400D2ABE2 /* KanaRomanizationController.swift */,
 				A3EBD12D1FFAB9A400D2ABE2 /* Main.storyboard */,
 				A3EBD1331FFAB9A400D2ABE2 /* Assets.xcassets */,
 				A3EBD1351FFAB9A400D2ABE2 /* LaunchScreen.storyboard */,
@@ -139,7 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3EBD12C1FFAB9A400D2ABE2 /* ViewController.swift in Sources */,
+				A3EBD12C1FFAB9A400D2ABE2 /* KanaRomanizationController.swift in Sources */,
 				A3EBD1321FFAB9A400D2ABE2 /* Kana.xcdatamodeld in Sources */,
 				A3EBD12A1FFAB9A400D2ABE2 /* AppDelegate.swift in Sources */,
 			);
@@ -281,6 +281,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 42YT2Y78T5;
 				INFOPLIST_FILE = Kana/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lukemorgenstern.Kana;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -296,6 +297,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 42YT2Y78T5;
 				INFOPLIST_FILE = Kana/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lukemorgenstern.Kana;
 				PRODUCT_NAME = "$(TARGET_NAME)";
