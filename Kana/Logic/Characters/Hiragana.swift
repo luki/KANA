@@ -8,16 +8,6 @@
 
 import Foundation
 
-//
-//  Hiragana.swift
-//  Kana
-//
-//  Created by Luke Morgenstern on 02.01.18.
-//  Copyright © 2018 Lukas A. Mueller. All rights reserved.
-//
-
-import Foundation
-
 let hiragana = [
   "ん":"n",
   
