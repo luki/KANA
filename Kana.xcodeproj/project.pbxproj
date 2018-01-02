@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A35FB4821FFBD2290028AE39 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35FB4811FFBD2290028AE39 /* Helpers.swift */; };
+		A35FB4841FFBD2550028AE39 /* KanaRomanization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35FB4831FFBD2550028AE39 /* KanaRomanization.swift */; };
+		A35FB4871FFBD2720028AE39 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35FB4861FFBD2720028AE39 /* Enums.swift */; };
+		A35FB4891FFBD33E0028AE39 /* Hiragana.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35FB4881FFBD33E0028AE39 /* Hiragana.swift */; };
 		A3EBD12A1FFAB9A400D2ABE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EBD1291FFAB9A400D2ABE2 /* AppDelegate.swift */; };
 		A3EBD12C1FFAB9A400D2ABE2 /* KanaRomanizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EBD12B1FFAB9A400D2ABE2 /* KanaRomanizationController.swift */; };
 		A3EBD12F1FFAB9A400D2ABE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3EBD12D1FFAB9A400D2ABE2 /* Main.storyboard */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A35FB4811FFBD2290028AE39 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		A35FB4831FFBD2550028AE39 /* KanaRomanization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaRomanization.swift; sourceTree = "<group>"; };
+		A35FB4861FFBD2720028AE39 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		A35FB4881FFBD33E0028AE39 /* Hiragana.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hiragana.swift; sourceTree = "<group>"; };
 		A3EBD1261FFAB9A400D2ABE2 /* Kana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3EBD1291FFAB9A400D2ABE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3EBD12B1FFAB9A400D2ABE2 /* KanaRomanizationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaRomanizationController.swift; sourceTree = "<group>"; };
@@ -37,6 +45,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A35FB47B1FFBD1AC0028AE39 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				A35FB47E1FFBD1B80028AE39 /* Characters */,
+				A35FB47D1FFBD1B50028AE39 /* Helpers */,
+				A35FB47C1FFBD1B30028AE39 /* Structs */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		A35FB47C1FFBD1B30028AE39 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				A35FB4861FFBD2720028AE39 /* Enums.swift */,
+				A35FB4851FFBD2570028AE39 /* Games */,
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
+		A35FB47D1FFBD1B50028AE39 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A35FB4811FFBD2290028AE39 /* Helpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A35FB47E1FFBD1B80028AE39 /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				A35FB4881FFBD33E0028AE39 /* Hiragana.swift */,
+			);
+			path = Characters;
+			sourceTree = "<group>";
+		};
+		A35FB4851FFBD2570028AE39 /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				A35FB4831FFBD2550028AE39 /* KanaRomanization.swift */,
+			);
+			path = Games;
+			sourceTree = "<group>";
+		};
 		A3EBD11D1FFAB9A400D2ABE2 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +107,7 @@
 		A3EBD1281FFAB9A400D2ABE2 /* Kana */ = {
 			isa = PBXGroup;
 			children = (
+				A35FB47B1FFBD1AC0028AE39 /* Logic */,
 				A3EBD1291FFAB9A400D2ABE2 /* AppDelegate.swift */,
 				A3EBD12B1FFAB9A400D2ABE2 /* KanaRomanizationController.swift */,
 				A3EBD12D1FFAB9A400D2ABE2 /* Main.storyboard */,
@@ -139,9 +191,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A35FB4841FFBD2550028AE39 /* KanaRomanization.swift in Sources */,
 				A3EBD12C1FFAB9A400D2ABE2 /* KanaRomanizationController.swift in Sources */,
+				A35FB4891FFBD33E0028AE39 /* Hiragana.swift in Sources */,
 				A3EBD1321FFAB9A400D2ABE2 /* Kana.xcdatamodeld in Sources */,
+				A35FB4871FFBD2720028AE39 /* Enums.swift in Sources */,
 				A3EBD12A1FFAB9A400D2ABE2 /* AppDelegate.swift in Sources */,
+				A35FB4821FFBD2290028AE39 /* Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

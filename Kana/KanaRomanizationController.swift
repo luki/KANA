@@ -134,6 +134,7 @@ class KanaRomanizationController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
     view.backgroundColor = .black
     
     view.addSubview(selectionStack)
