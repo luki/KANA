@@ -59,7 +59,7 @@ struct KanaRomanizationGame {
     
     // Generate 3 random elements for options
     _ = Array(0..<3).forEach { _ in
-      var indexOfRandomOptEle = Int(arc4random_uniform(UInt32(chooseFrom.count-1)))
+      let indexOfRandomOptEle = Int(arc4random_uniform(UInt32(chooseFrom.count-1)))
       
       if keyOrValueForChoosing == 0 { options.insert(Array(chooseFrom.keys)[indexOfRandomOptEle+1], at: 0) }
       if keyOrValueForChoosing == 1 { options.insert(Array(chooseFrom.values)[indexOfRandomOptEle+1], at: 0) }

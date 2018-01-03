@@ -132,8 +132,18 @@ class KanaRomanizationController: UIViewController {
     return sv
   }()
   
+  let topStack: UIStackView = {
+    let sv = UIStackView()
+    sv.spacing = 44/2
+    sv.distribution = .fillEqually
+    return sv
+  }()
+  
+  var game: KanaRomanizationGame!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
+    game = KanaRomanizationGame(startGameWith: hiragana, andGameMode: .alwaysRomanOption)
     
     view.backgroundColor = .black
     
@@ -145,12 +155,10 @@ class KanaRomanizationController: UIViewController {
     topBackground.addSubview(wrongLabel)
     topBackground.addSubview(answersLeft)
     
-    let topStack = UIStackView()
-    topStack.spacing = 44/2
-    topStack.distribution = .fillEqually
-    
-    for _ in 0...1 {
+    for i in 1...2 {
       let sf = SelectionField()
+      sf.tag = i
+      sf.addTarget(self, action: #selector(answerAction), for: .touchUpInside)
       sf.backgroundColor = .white
       topStack.addArrangedSubview(sf)
     }
@@ -160,9 +168,11 @@ class KanaRomanizationController: UIViewController {
     bottomStack.distribution = .fillEqually
     bottomStack.axis = .horizontal
     
-    for _ in 0...1 {
+    for i in 3...4 {
       let sf = SelectionField()
+      sf.addTarget(self, action: #selector(answerAction), for: .touchUpInside)
       sf.backgroundColor = .white
+      sf.tag = i
       bottomStack.addArrangedSubview(sf)
     }
     
@@ -199,6 +209,41 @@ class KanaRomanizationController: UIViewController {
       answersLeft.topAnchor.constraint(equalTo: topBackground.topAnchor, constant: 36/2),
       answersLeft.widthAnchor.constraint(equalToConstant: 140/2)
       ])
+    
+    loadInRound()
+  }
+  
+  func loadInRound() {
+    let roundInformation = game.getCharacterRound
+    topLabel.text = roundInformation.0
+    answersLeft.text = "\(game.getAmountLeft) left"
+    wrongLabel.text = String(game.missed.count)
+    correctLabel.text = String(game.answered.count)
+    
+    for substack in selectionStack.arrangedSubviews {
+      if let sub = substack as? UIStackView {
+        for subview in sub.arrangedSubviews {
+          if let selectionField = subview as? SelectionField {
+            if selectionField.tag == 1 { selectionField.label.text = roundInformation.1.0 }
+            if selectionField.tag == 2 { selectionField.label.text = roundInformation.1.1 }
+            if selectionField.tag == 3 { selectionField.label.text = roundInformation.1.2 }
+            if selectionField.tag == 4 { selectionField.label.text = roundInformation.1.3 }
+          }
+        }
+      }
+    }
+  }
+  
+  @objc func answerAction(_ sender: SelectionField) {
+    if game.status == .off { return }
+    
+    switch game.answer(with: sender.label.text!) {
+    case .correct:
+        print("Correct!")
+    case.wrong:
+        print("Wrong!")
+    }
+    if game.getAmountLeft > 0 { loadInRound() } else { print("End") }
   }
 }
 
